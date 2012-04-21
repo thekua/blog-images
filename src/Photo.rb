@@ -17,6 +17,10 @@ class Photo
     @image.rows
   end
   
+  def write_to(file)
+    @image.write file
+  end
+  
   def shrink_for_blog
     @image = @image.scale(0.141)
   end
