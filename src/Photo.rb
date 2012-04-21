@@ -8,7 +8,15 @@ class Photo
   def isSLR?
     model.include?('EOS')
   end
+  
+  def width
+    @image.columns
+  end
 
+  def height
+    @image.rows
+  end
+ 
   private 
   def model
     @image['EXIF:Model'] 
