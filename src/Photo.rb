@@ -16,6 +16,10 @@ class Photo
   def height
     @image.rows
   end
+  
+  def shrink_for_blog
+    @image = @image.scale(0.141)
+  end
  
   private 
   def model

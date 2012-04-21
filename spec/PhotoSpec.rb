@@ -9,4 +9,12 @@ describe 'Photo' do
      photo.width.should be 300
      photo.height.should be 200
    end
+   
+   it "should properly resize" do
+     photo = Photo.new(File.dirname(__FILE__) + '/MuffinsSmall.jpg')
+     photo.shrink_for_blog
+     photo.width.should be 42
+     photo.height.should be 28
+  
+   end
 end
