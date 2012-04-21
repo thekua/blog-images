@@ -6,7 +6,7 @@ class Photo
   end
   
   def isSLR?
-    @model.include('EOS')
+    model.include?('EOS')
   end
 
   private 
